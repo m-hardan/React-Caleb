@@ -1,6 +1,9 @@
 import './App.css';
+import Employee from './components/Employee';
 
 function App() {
+  console.log('we are about to list the employees');
+  const showEmplyees = true;
   return (
     <div className="App">
       <header className="App-header">
@@ -14,6 +17,20 @@ function App() {
           Learn React
         </a>
       </header>
+      <div className='App'>
+        {console.log('inside the return')}
+        {showEmplyees ? (
+          <>
+               <Employee />
+               <Employee />
+               <Employee />
+               <Employee />
+               <Employee />
+          </>
+        ) : (
+            <p>You cannot see the employees</p>
+        )}
+      </div>
     </div>
   );
 }
