@@ -2,7 +2,7 @@ import './App.css';
 import Employee from './components/Employee';
 
 function App() {
-  console.log('we are about to list the employees');
+  //console.log('we are about to list the employees');
   const showEmplyees = true;
   return (
     <div className="App">
@@ -18,7 +18,7 @@ function App() {
         </a>
       </header>
       <div className='App'>
-        {console.log('inside the return')}
+        {/*console.log('inside the return')*/}
         {showEmplyees ? (
           <>
                <Employee />
