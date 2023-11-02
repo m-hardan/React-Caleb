@@ -21,11 +21,9 @@ function App() {
         {/*console.log('inside the return')*/}
         {showEmplyees ? (
           <>
-               <Employee />
-               <Employee />
-               <Employee />
-               <Employee />
-               <Employee />
+               <Employee name="Caleb" role="Intern"/>
+               <Employee name="Abby" />
+               <Employee name="John" />
           </>
         ) : (
             <p>You cannot see the employees</p>
