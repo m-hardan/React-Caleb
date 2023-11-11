@@ -33,8 +33,6 @@ function EditEmployee(props) {
           <form onSubmit={(e) => {
             handleClose();
             e.preventDefault();
-            console.log('Hello from edit Employee');
-            console.log(props.id, name, role);            
             props.updateEmployee(props.id, name, role);
           }}
           id="editmodal" className="w-full max-w-sm" >

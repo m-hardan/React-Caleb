@@ -10,37 +10,37 @@ function App() {
       id: 1,
       name: "Caleb",
       role: "Developer",
-      img: "https://th.bing.com/th?id=ORMS.bc97f2501e728bea41772c453e09396e&pid=Wdp&w=300&h=156&qlt=90&c=1&rs=1&dpr=1&p=0",
+      img: "http://localhost:8080/images/3.jpg",
     },
     {
       id: 2,
       name: "Sal",
       role: "Manager",
-      img: "https://images.pexels.com/photos/6194365/pexels-photo-6194365.jpeg",
+      img: "http://localhost:8080/images/4.jpeg",
     },
     {
       id: 3,
       name: "John",
       role: "Director of Eng.",
-      img: "https://images.pexels.com/photos/7562313/pexels-photo-7562313.jpeg?auto=compress&cs=tinysrgb&w=600",
+      img: "http://localhost:8080/images/5.jpeg",
     },
     {
       id: 4,
       name: "Melanie",
       role: "Software Engineer",
-      img: "https://images.pexels.com/photos/5704849/pexels-photo-5704849.jpeg?auto=compress&cs=tinysrgb&w=600",
+      img: "http://localhost:8080/images/6.jpeg",
     },
     {
       id: 5,
       name: "Corey",
       role: "Devops Engineer",
-      img: "https://images.pexels.com/photos/4890259/pexels-photo-4890259.jpeg?auto=compress&cs=tinysrgb&w=600",
+      img: "http://localhost:8080/images/7.jpeg",
     },
     {
       id: 6,
       name: "Jake",
       role: "Senior Intern",
-      img: "https://images.pexels.com/photos/5384429/pexels-photo-5384429.jpeg?auto=compress&cs=tinysrgb&w=600",
+      img: "http://localhost:8080/images/8.jpeg",
     },
   ]);
 
