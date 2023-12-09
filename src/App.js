@@ -1,11 +1,12 @@
 import "./index.css";
 import Employee from "./components/Employee";
 import { useState } from "react";
-import {v4 as uuidv4} from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import AddEmployee from "./components/AddEmplyee";
+import EditEmployee from "./components/EditEmployee";
 
 function App() {
-  const [role, setRole] = useState("dev");
+//  const [role, setRole] = useState("dev");
   const [employees, setEmployees] = useState([
     {
       id: 1,
@@ -45,10 +46,10 @@ function App() {
     },
   ]);
 
-  function updateEmployee(id, newName, newRole){
+  function updateEmployee(id, newName, newRole) {
     const updatedEmployees = employees.map((employee) => {
-      if (id == employee.id){
-        return {...employee, name: newName, role: newRole}
+      if (id === employee.id) {
+        return { ...employee, name: newName, role: newRole }
       }
 
       return employee
@@ -56,12 +57,12 @@ function App() {
     setEmployees(updatedEmployees);
   }
 
-  function newEmployee(name, role, img){
+  function newEmployee(name, role, img) {
     const newEmployee = {
       id: uuidv4(),
-      name:name,
-      role:role,
-      img:img,
+      name: name,
+      role: role,
+      img: img,
     }
     setEmployees([...employees, newEmployee]);
   }
@@ -69,27 +70,33 @@ function App() {
   const showEmplyees = true;
   return (
     <div className="App">
-        {showEmplyees ? (
-          <>
-            <div className="flex flex-wrap justify-center">
-              {employees.map((employee) => {
-                return(
-                  <Employee
-                    key={employee.id}
-                    id={employee.id}
-                    name={employee.name}
-                    role={employee.role}
-                    img={employee.img}
-                    updateEmployee={updateEmployee}
-                  />
-                );
-              })}
-            </div>
-            <AddEmployee newEmployee={newEmployee}/>
-          </>
-        ) : (
-          <p>You cannot see the employees</p>
-        )}
+      {showEmplyees ? (
+        <>
+          <div className="flex flex-wrap justify-center">
+            {employees.map((employee) => {
+              const editEmployee = <EditEmployee
+                id={employee.id}
+                name={employee.name}
+                role={employee.role}
+                updateEmployee={updateEmployee}
+              />
+              return (
+                <Employee
+                  key={employee.id}
+                  id={employee.id}
+                  name={employee.name}
+                  role={employee.role}
+                  img={employee.img}
+                  editEmployee={editEmployee}
+                />
+              );
+            })}
+          </div>
+          <AddEmployee newEmployee={newEmployee} />
+        </>
+      ) : (
+        <p>You cannot see the employees</p>
+      )}
     </div>
   );
 }
